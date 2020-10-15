@@ -10,7 +10,7 @@ run:
   path: /bin/sh
   args:
   - -exc
-  - npm install && node fruitweb-master/node_modules/@angular/cli/bin/ng test
+  - cd fruitweb-master && npm install && node node_modules/@angular/cli/bin/ng test
 
 inputs:
 - name: fruitweb-master
