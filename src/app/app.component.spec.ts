@@ -1,5 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { FruitsService } from './fruits.service';
+import { MockFruitsService } from './fruits.service.mock';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -7,6 +9,9 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [
+        { provide: FruitsService, useClass: MockFruitsService }
+      ]
     }).compileComponents();
   }));
 
@@ -14,18 +19,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'fruit-web'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('fruit-web');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to fruit-web!');
   });
 });
