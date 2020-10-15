@@ -10,7 +10,7 @@ run:
   path: sh
   args:
   - -exc
-  - cd fruitweb-master && npm install && node node_modules/@angular/cli/bin/ng test --karma-config karma.conf.ci.js
+  - cd fruitweb-master && npm install && node node_modules/@angular/cli/bin/ng test --karma-config src/karma.conf.ci.js
 
 inputs:
 - name: fruitweb-master
