@@ -3,11 +3,11 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: angular/ngcontainer
-    tag: 'latest'
+    repository: node
+    tag: '12'
 
 run:
-  path: fruitweb-master/node_modules/.bin/ng test
+  path: node fruitweb-master/node_modules/@angular/cli/bin/ng test
   args: ["--no-watch"]
 
 inputs:
