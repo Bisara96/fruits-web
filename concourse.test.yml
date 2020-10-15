@@ -3,14 +3,14 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: angular/ngcontainer
-    tag: 'latest'
+    repository: node
+    tag: '12'
 
 run:
   path: sh
   args:
   - -exc
-  - cd fruitweb-master && sudo npm install && ng test --karma-config karma.conf.ci.js
+  - cd fruitweb-master && sudo npm install && node node_modules/@angular/cli/bin/ng test --karma-config karma.conf.ci.js
 
 inputs:
 - name: fruitweb-master
