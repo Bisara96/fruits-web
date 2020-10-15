@@ -12,6 +12,7 @@ run:
 
 inputs:
 - name: fruitweb-master
+  path: fruitweb-master
 
 outputs:
 - name: new-release
