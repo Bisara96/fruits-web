@@ -11,7 +11,6 @@ run:
 
 inputs:
 - name: fruitweb-master
-  path: usr/src/app/fruitweb-master
 
 outputs:
 - name: new-release
