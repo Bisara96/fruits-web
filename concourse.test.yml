@@ -7,7 +7,7 @@ image_resource:
     tag: 'latest'
 
 run:
-  path: /bin/sh
+  path: sh
   args:
   - -exc
   - cd fruitweb-master && npm install && ng test --karma-config karma.conf.ci.js
