@@ -10,11 +10,11 @@ run:
   path: sh
   args:
   - -exc
-  - cd /home/fruitweb-master && npm install && ng test --karma-config karma.conf.ci.js
+  - cd usr/src/app/fruitweb-master && npm install && ng test --karma-config karma.conf.ci.js
 
 inputs:
 - name: fruitweb-master
-  path: /home/fruitweb-master
+  path: usr/src/app/fruitweb-master
 
 outputs:
 - name: new-release
