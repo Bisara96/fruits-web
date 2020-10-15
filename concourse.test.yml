@@ -7,8 +7,7 @@ image_resource:
     tag: 'latest'
 
 run:
-  path: node_modules/.bin/ng test
-  args: ["--no-watch"]
+  path: ls
 
 inputs:
 - name: fruitweb-master
